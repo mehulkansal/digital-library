@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <style>
+        body {
+           
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size:100% 100%;
+          }
+          </style>
+    <title> Sign in</title>
+</head>
+<body style="background-image: url({% static 'lib.jpg' %});">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">E-Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About Us</a>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contact
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="contactus">Contact Us</a>
+            <a class="dropdown-item" href="mailto:24kansalmehul@gmail.com">Mail Us</a>
+          </div>
+        </li>
+      </ul>
+     
+    </div>
+  </nav>
+<br>
+<br>
+<div style="display: flex; justify-content: center;align-items: center;">
+
+
+<section class="form-dark" style="justify-content: center; align-items: center;">
+
+  <!--Form without header-->
+  <div class="card card-image" 
+    style="  background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg'); width: 28rem;">
+    <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+
+      <!--Header-->
+      <form action="succes/" method="post">
+        {% csrf_token %}
+      <div class="text-center">
+        <h3 class="white-text mb-5 mt-4 font-weight-bold"><strong>SIGN</strong> <a
+            class="green-text font-weight-bold"><strong> IN</strong></a></h3>
+      </div>
+
+      <!--Body-->
+      <div class="md-form">
+        <input type="text" name="username" id="Form-email5" class="form-control white-text">
+        <label for="Form-email5"class="green-text font-weight-bold">Username</label>
+      </div>
+
+      <div class="md-form pb-3">
+        <input type="password" name="password" id="Form-pass5" class="form-control white-text">
+        <label for="Form-pass5"class="green-text font-weight-bold">Your password</label>
+        <div class="form-check my-4">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck17">
+          <label class="form-check-label white-text" for="defaultCheck17">Accept the<a href="#"
+              class="green-text font-weight-bold"> Terms and Conditions</a></label>
+        </div>
+      </div>
+
+      <!--Grid row-->
+      <div class="row d-flex align-items-center mb-4">
+
+        <!--Grid column-->
+        <div class="text-center mb-3 col-md-12">
+          <button type="submit" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button>
+        </div>
+       
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+
+      <!--Grid column-->
+      <div class="col-md-12">
+        <p class="font-small white-text d-flex justify-content-end">Teacher ? <a href="admin/"
+            class="green-text ml-1 font-weight-bold"> Log in</a></p>
+      </div>
+      <!--Grid column-->
+     </form>
+    </div>
+  </div>
+  <!--/Form without header-->
+
+</section>
+<!--Section: Live preview-->
+
+
+
+
+
+<br><br><br><br><br>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
